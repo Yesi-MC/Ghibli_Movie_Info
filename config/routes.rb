@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get '/', to: 'welcome#index', as: :root
 
-  resources :movies, only: [:index]
+  resources :movies, only: [:index, :show]
 
 
   # root to: welcome_path

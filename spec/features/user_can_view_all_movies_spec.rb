@@ -8,7 +8,8 @@ describe 'As a visitor' do
       click_button "View all Movies" 
 
       expect(current_path).to eq(movies_path)
-      expect(page).to have_content("Castle in the Sky")
+      expect(page).to have_content("CASTLE IN THE SKY")
+      #this test is like our search index
     end 
   end 
 end

@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ 
+ body {
+  background-image: url("studio_pics/Ghibli.png");
+  height: 768px;
+  background-size: contain;
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  overflow: auto;
+}
