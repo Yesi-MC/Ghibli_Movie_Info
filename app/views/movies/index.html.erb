@@ -1,7 +1,7 @@
 <h1><%= @movies.count %> Results</h1>
 
 <% @movies.each do |movie|%>
-  <h4>Title: <%= movie[:title] %></h4>
-  <h4>Description: <%= movie[:description] %></h4>
-  <h4>Release Date: <%= movie[:release_date] %></h4><br>
+  <h4>Title: <%= link_to "#{movie.title}", movie_path(movie.id)  %></h4>
+  <h4>Description: <%= movie.description %></h4>
+  <h4>Release Date: <%= movie.release_date %></h4><br>
 <% end%>
