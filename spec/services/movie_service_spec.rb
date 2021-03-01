@@ -5,10 +5,9 @@ RSpec.describe MovieService do
     it "call_api_for-movies" do
       search = MovieService.call_api_for_movies
 
-      expect(search).to be_a(Array) #expecting the aray class 
+      expect(search).to be_a(Array) 
       
-      movie_data = search.first #if its an array of things we only want to test the first one 
-      #and we only want to test the keys we are using 
+      movie_data = search.first  
     
       expect(movie_data).to have_key(:id)
       expect(movie_data[:id]).to be_a(String)
@@ -32,10 +31,8 @@ RSpec.describe MovieService do
     it "call_api_for-movies" do
       movie_data = MovieService.call_api_for_single_movie("2baf70d1-42bb-4437-b551-e5fed5a87abe")
 
-      expect(movie_data).to be_a(Hash) #expecting the hash class 
+      expect(movie_data).to be_a(Hash) 
       
-      #also only test for the keys we need, they wont alays be the same as the one above 
-      #sometimes we will need to test fo more or less keys for the single movie 
       expect(movie_data).to have_key(:id)
       expect(movie_data[:id]).to be_a(String)
       
